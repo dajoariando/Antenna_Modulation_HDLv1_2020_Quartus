@@ -1,0 +1,18 @@
+# ignore editor backup files
+*.jic
+*.bak
+*.sopcinfo
+
+# ignore Quartus generated files
+
+# keep generated binaries from output_files
+
+# ignore Quartus generated folders
+/db/
+/incremental_db/
+/simulation/
+/.qsys_edit/
+
+# ignore some custom folders
+/QSYS/*
+!/QSYS/system.qsys
