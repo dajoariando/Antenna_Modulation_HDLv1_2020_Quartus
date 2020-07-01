@@ -1,7 +1,7 @@
 // bitstreamer module.
 // author: David Ariando
 // date: 2020/06/30
-// this module streams out a synchronized output for FSK with corresponding
+// this module streams outp a synchronized output for FSK with corresponding
 // control signal.
 
 `timescale 1ns / 1ps
@@ -21,7 +21,9 @@ module bitstreamer
 	input start,
 	input rst,
 	
-	output reg out,
+	output reg sysrun,
+	output reg outp,
+	output reg outn,
 	output reg bitout
 );
 
@@ -46,7 +48,8 @@ module bitstreamer
 		if (rst)
 		begin
 			State <= S0;
-			out <= 1'b0;
+			outp <= 1'b0;
+			outn <= 1'b0;
 		end
 		
 		else
@@ -60,7 +63,9 @@ module bitstreamer
 					datain_reg <= datain;
 					phase_delay_reg <= phase_delay;
 					datalen_LOADVAL <= {{1'b1},{(CNTLEN-1){1'b0}}} - DATALEN + 1'b1;
-					out <= 1'b0;
+					outp <= 1'b0;
+					outn <= 1'b0;
+					sysrun <= 1'b0;
 					
 					if (start)
 						State <= S1;
@@ -85,8 +90,10 @@ module bitstreamer
 					
 					
 					// start high pulse
-					out <= 1'b1;
+					outp <= 1'b1;
+					outn <= 1'b0;
 					bitout <= datain_reg[0];
+					sysrun <= 1'b1;
 						
 					State <= S2;
 				end
@@ -103,7 +110,8 @@ module bitstreamer
 				begin
 				
 					// start low pulse
-					out <= 1'b0;
+					outp <= 1'b0;
+					outn <= 1'b1;
 					
 					halfclk_LOADVAL <= halfclk_LOADVAL + 1'b1;
 					
@@ -115,7 +123,8 @@ module bitstreamer
 				begin
 					
 					// start high pulse
-					out <= 1'b1;
+					outp <= 1'b1;
+					outn <= 1'b0;
 					
 					taildelay_LOADVAL <= taildelay_LOADVAL + 1'b1;
 					

@@ -84,16 +84,19 @@ module DE0_NANO_SOC_Default(
 	//=======================================================
 	// reg  [31:0]	Cont;
 	
-	localparam DATALEN = 64;
+	localparam DATALEN = 32;
 	localparam CNTLEN = 8;
-	localparam CLK_DIV1 = 16;		// the bitstream1 frequency division factor from clock
-	localparam CLK_DIV2 = 32;			// the bitstream2 frequency division factor from clock
+	localparam CLK_DIV1 = 16;		// the bitstream1 frequency division factor from clock. PLL should be 4MHz*factor
+	localparam CLK_DIV2 = 32;			// the bitstream2 frequency division factor from clock. PLL output should be 2MHz*factor
 	wire [DATALEN-1:0]	datain;
 	wire [CNTLEN-1:0]	phase_delay;
 	wire ant_clk;
 	wire start;
 	wire rst;
-	wire out;
+	wire outp;
+	wire outn;
+	wire sysrun;
+	wire cnt_start;
 	
 	
 	//=======================================================
@@ -109,7 +112,8 @@ module DE0_NANO_SOC_Default(
         .ant_clk_clk           (ant_clk),				//        ant_clk.clk
         .ant_clk_locked_export (LED[7]),  // ant_clk_locked.export
 		  .led_export            (LED[6:0]),            //            led.export
-        .sw_export             (SW[3:0])              // 
+        .sw_export             (SW[3:0]),
+			.cnt_start_export      (cnt_start)		  // 
     );
 
 	 
@@ -129,31 +133,35 @@ module DE0_NANO_SOC_Default(
 		
 		.clk		(ant_clk),
 		.start	(start),
-		.rst		(rst),
+		.rst		(~rst),
 		
-		.out		(out),
+		.sysrun		(sysrun),
+		.outp		(outp),
+		.outn		(outn),
 		.bitout	(bitout)
 	);
 	
 	// pin assignments
-	assign start 	= ~KEY[1];
+	assign start 	= ~KEY[1] || cnt_start;
 	assign rst 		= KEY[0];
-	assign GPIO_0[0] = out;
-	assign GPIO_0[1] = bitout;
-	assign GPIO_1[0] = out;
-	assign GPIO_1[1] = bitout;
+	assign GPIO_0[1] = outp;
+	assign GPIO_0[3] = outn;
+	assign GPIO_0[5] = bitout;
+	assign GPIO_1[1] = outp;
+	assign GPIO_1[3] = outn;
+	assign GPIO_1[5] = bitout;
 	
-	assign GPIO_0[15] = out; // highfet 1
-	assign GPIO_0[17] = ~out; // lowfet 1
-	assign GPIO_0[19] = ~out; // highfet 2
-	assign GPIO_0[21] = out; // lowfet 2
+	assign GPIO_0[15] = outp; // highfet 1
+	assign GPIO_0[17] = outn || (~sysrun); // lowfet 1
+	assign GPIO_0[19] = outn; // highfet 2
+	assign GPIO_0[21] = outp || (~sysrun); // lowfet 2
 	assign GPIO_0[23] = bitout; // damp1
 	assign GPIO_0[25] = bitout; // damp2
 	
-	assign GPIO_1[15] = out; // highfet 1
-	assign GPIO_1[17] = ~out; // lowfet 1
-	assign GPIO_1[19] = ~out; // highfet 2
-	assign GPIO_1[21] = out; // lowfet 2
+	assign GPIO_1[15] = outp; // highfet 1
+	assign GPIO_1[17] = outn || (~sysrun);// lowfet 1
+	assign GPIO_1[19] = outn; // highfet 2
+	assign GPIO_1[21] = outp || (~sysrun); // lowfet 2
 	assign GPIO_1[23] = bitout; // damp1
 	assign GPIO_1[25] = bitout; // damp2
 	

@@ -15,7 +15,9 @@ reg clk;
 reg start;
 reg rst;
 
-wire out;
+wire sysrun;
+wire outp;
+wire outn;
 
 
 
@@ -35,7 +37,9 @@ dut
 	.start	(start),
 	.rst		(rst),
 	
-	.out		(out),
+	.sysrun		(sysrun),
+	.outp		(outp),
+	.outn		(outn),
 	.bitout	(bitout)
 );
 
