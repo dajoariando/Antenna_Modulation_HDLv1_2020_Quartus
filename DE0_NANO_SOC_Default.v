@@ -84,14 +84,15 @@ module DE0_NANO_SOC_Default(
 	//=======================================================
 	// reg  [31:0]	Cont;
 	
-	localparam DATALEN = 32;
+	localparam DATALEN = 128;
 	localparam CNTLEN = 8;
-	localparam CLK_DIV1 = 16;		// the bitstream1 frequency division factor from clock. PLL should be 4MHz*factor
-	localparam CLK_DIV2 = 32;			// the bitstream2 frequency division factor from clock. PLL output should be 2MHz*factor
+	localparam CLK_DIV1 = 32;		// the bitstream1 frequency division factor from clock. PLL should be 4MHz*factor
+	localparam CLK_DIV2 = 64;			// the bitstream2 frequency division factor from clock. PLL output should be 2MHz*factor
 	wire [DATALEN-1:0]	datain;
 	wire [CNTLEN-1:0]	phase_delay;
 	wire ant_clk;
 	wire start;
+	wire start_debounced;
 	wire rst;
 	wire outp;
 	wire outn;
@@ -107,7 +108,10 @@ module DE0_NANO_SOC_Default(
     system u0 (
         .clk_clk               (FPGA_CLK1_50),		//            clk.clk
         .reset_reset_n         (rst),				//          reset.reset_n
-        .datain_export         (datain),				//         datain.export
+        .datain0_export        (datain[31:0]),				//         datain.export
+		  .datain1_export        (datain[63:32]),        //        datain1.export
+        .datain2_export        (datain[95:64]),        //        datain2.export
+        .datain3_export        (datain[127:96]),         // 
         .ph_dly_export         (phase_delay),		//         ph_dly.export
         .ant_clk_clk           (ant_clk),				//        ant_clk.clk
         .ant_clk_locked_export (LED[7]),  // ant_clk_locked.export
@@ -116,7 +120,24 @@ module DE0_NANO_SOC_Default(
 			.cnt_start_export      (cnt_start)		  // 
     );
 
-	 
+	GNRL_delayed_pulser
+	#(
+		.DELAY_WIDTH (32)
+	)
+	start_pulser
+	(
+		// signals
+		.SIG_IN (start),
+		.SIG_OUT (start_debounced),
+		
+		// parameters
+		.DELAY (32'd32000000), // 32 million: generate delay of 500ms at 64MHz clock (ant_clk)
+		
+		// system
+		.CLK (ant_clk),
+		.RESET (~rst)
+		
+	);
 	
 	
 	bitstreamer
@@ -132,7 +153,7 @@ module DE0_NANO_SOC_Default(
 		.phase_delay (phase_delay),
 		
 		.clk		(ant_clk),
-		.start	(start),
+		.start	(start_debounced),
 		.rst		(~rst),
 		
 		.sysrun		(sysrun),
@@ -164,21 +185,6 @@ module DE0_NANO_SOC_Default(
 	assign GPIO_1[21] = outp || (~sysrun); // lowfet 2
 	assign GPIO_1[23] = bitout; // damp1
 	assign GPIO_1[25] = bitout; // damp2
-	
-	/*
-	assign GPIO_0  		=	36'hzzzzzzzz;
-	assign GPIO_1  		=	36'hzzzzzzzz;
 
-	always@(posedge FPGA_CLK1_50 or negedge KEY[0])
-		 begin
-			  if(!KEY[0])
-				 Cont	<=	0;
-			  else
-				 Cont	<=	Cont+1;
-		 end
-		 
-	assign	LED =	KEY[0]? {Cont[25:24],Cont[25:24],Cont[25:24],
-										  Cont[25:24],Cont[25:24]}:10'h3ff;
-	*/
 									  
 endmodule

@@ -2,7 +2,7 @@
 
 module bitstreamer_tb;
 
-localparam DATALEN = 64;
+localparam DATALEN = 10;
 localparam CNTLEN = 8;
 localparam CLK_DIV1 = 16;		// the bitstream1 frequency division factor from clock
 localparam CLK_DIV2 = 32;			// the bitstream2 frequency division factor from clock
@@ -56,8 +56,9 @@ dut
 	
 	initial
 	begin
-		datain = 10'b111000110101000;
-		phase_delay = 3;
+		// datain = 10'b1111111111;
+		datain = 10'b0;
+		phase_delay = 6;
 		rst = 1;
 		start = 0;
 		

@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4U23) Path("X:/Quartus_workspaces/Antenna_Modulation_HDLv1_2020_Quartus/") File("DE0_NANO_SOC_Default.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA4U23) Path("D:/Antenna_Modulation_HDLv1_2020_Quartus/") File("DE0_NANO_SOC_Default.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -419,11 +419,12 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id bitstreamer_
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME bitstreamer_tb -section_id bitstreamer_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE bitstreamer_tb.v -section_id bitstreamer_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE bitstreamer.v -section_id bitstreamer_tb
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 1
+set_global_assignment -name VERILOG_FILE GNRL_delayed_pulser.v
 set_global_assignment -name QSYS_FILE QSYS/system.qsys
 set_global_assignment -name VERILOG_FILE DE0_NANO_SOC_Default.v
 set_global_assignment -name SDC_FILE DE0_NANO_SOC_Default.SDC
 set_global_assignment -name VERILOG_FILE bitstreamer.v
 set_global_assignment -name VERILOG_FILE bitstreamer_tb.v
-set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
-set_global_assignment -name NUM_PARALLEL_PROCESSORS 1
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

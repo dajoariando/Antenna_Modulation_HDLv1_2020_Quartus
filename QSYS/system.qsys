@@ -13,7 +13,7 @@
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "7";
          type = "int";
       }
    }
@@ -29,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "11";
          type = "int";
       }
    }
@@ -46,7 +46,7 @@
          type = "String";
       }
    }
-   element datain
+   element datain0
    {
       datum _sortIndex
       {
@@ -54,7 +54,7 @@
          type = "int";
       }
    }
-   element datain.s1
+   element datain0.s1
    {
       datum _lockedAddress
       {
@@ -67,11 +67,74 @@
          type = "String";
       }
    }
+   element datain1
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element datain1.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "112";
+         type = "String";
+      }
+   }
+   element datain2
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element datain2.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "96";
+         type = "String";
+      }
+   }
+   element datain3
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element datain3.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "80";
+         type = "String";
+      }
+   }
    element led
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "9";
          type = "int";
       }
    }
@@ -100,7 +163,7 @@
    {
       datum _sortIndex
       {
-         value = "3";
+         value = "6";
          type = "int";
       }
    }
@@ -121,7 +184,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "8";
          type = "int";
       }
    }
@@ -142,7 +205,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "10";
          type = "int";
       }
    }
@@ -193,8 +256,23 @@
    type="conduit"
    dir="end" />
  <interface
-   name="datain"
-   internal="datain.external_connection"
+   name="datain0"
+   internal="datain0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="datain1"
+   internal="datain1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="datain2"
+   internal="datain2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="datain3"
+   internal="datain3.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -328,7 +406,7 @@
   <parameter name="gui_multiply_factor" value="1" />
   <parameter name="gui_number_of_clocks" value="1" />
   <parameter name="gui_operation_mode" value="direct" />
-  <parameter name="gui_output_clock_frequency0" value="60.64" />
+  <parameter name="gui_output_clock_frequency0" value="119.104" />
   <parameter name="gui_output_clock_frequency1" value="100.0" />
   <parameter name="gui_output_clock_frequency10" value="100.0" />
   <parameter name="gui_output_clock_frequency11" value="100.0" />
@@ -432,7 +510,49 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
  </module>
- <module name="datain" kind="altera_avalon_pio" version="17.1" enabled="1">
+ <module name="datain0" kind="altera_avalon_pio" version="17.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="4042312874" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="datain1" kind="altera_avalon_pio" version="17.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="4042312874" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="datain2" kind="altera_avalon_pio" version="17.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="4042312874" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="datain3" kind="altera_avalon_pio" version="17.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -521,7 +641,7 @@
   <parameter name="baseAddress" value="0x0100" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="avalon" version="17.1" start="master_0.master" end="datain.s1">
+ <connection kind="avalon" version="17.1" start="master_0.master" end="datain0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0040" />
   <parameter name="defaultConnection" value="false" />
@@ -550,12 +670,30 @@
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection kind="avalon" version="17.1" start="master_0.master" end="datain1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0070" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="avalon" version="17.1" start="master_0.master" end="datain2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="avalon" version="17.1" start="master_0.master" end="datain3.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection kind="clock" version="17.1" start="clk_0.clk" end="master_0.clk" />
- <connection kind="clock" version="17.1" start="clk_0.clk" end="datain.clk" />
+ <connection kind="clock" version="17.1" start="clk_0.clk" end="datain0.clk" />
  <connection kind="clock" version="17.1" start="clk_0.clk" end="ph_dly.clk" />
  <connection kind="clock" version="17.1" start="clk_0.clk" end="led.clk" />
  <connection kind="clock" version="17.1" start="clk_0.clk" end="sw.clk" />
  <connection kind="clock" version="17.1" start="clk_0.clk" end="cnt_start.clk" />
+ <connection kind="clock" version="17.1" start="clk_0.clk" end="datain1.clk" />
+ <connection kind="clock" version="17.1" start="clk_0.clk" end="datain2.clk" />
+ <connection kind="clock" version="17.1" start="clk_0.clk" end="datain3.clk" />
  <connection
    kind="clock"
    version="17.1"
@@ -598,7 +736,7 @@
    kind="reset"
    version="17.1"
    start="clk_0.clk_reset"
-   end="datain.reset" />
+   end="datain0.reset" />
  <connection
    kind="reset"
    version="17.1"
@@ -619,13 +757,28 @@
  <connection
    kind="reset"
    version="17.1"
+   start="clk_0.clk_reset"
+   end="datain1.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_0.clk_reset"
+   end="datain2.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_0.clk_reset"
+   end="datain3.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
    start="master_0.master_reset"
    end="pll_reconfig_0.mgmt_reset" />
  <connection
    kind="reset"
    version="17.1"
    start="master_0.master_reset"
-   end="datain.reset" />
+   end="datain0.reset" />
  <connection
    kind="reset"
    version="17.1"
@@ -651,6 +804,21 @@
    version="17.1"
    start="master_0.master_reset"
    end="cnt_start.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="master_0.master_reset"
+   end="datain1.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="master_0.master_reset"
+   end="datain2.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="master_0.master_reset"
+   end="datain3.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

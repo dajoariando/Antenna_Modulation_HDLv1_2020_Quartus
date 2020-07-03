@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for DE0_NANO_SOC_Default
-Wed Jul 01 07:31:24 2020
+Thu Jul 02 05:21:23 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -100,20 +100,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 16     ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; SDC File List                                                                                                                                                            ;
-+--------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
-; SDC File Path                                                                                                                        ; Status ; Read at                  ;
-+--------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
-; DE0_NANO_SOC_Default.SDC                                                                                                             ; OK     ; Wed Jul 01 07:31:12 2020 ;
-; d:/shared_drive/quartus_workspaces/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_avalon_st_jtag_interface.sdc ; OK     ; Wed Jul 01 07:31:12 2020 ;
-; d:/shared_drive/quartus_workspaces/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_reset_controller.sdc         ; OK     ; Wed Jul 01 07:31:12 2020 ;
-+--------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; SDC File List                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                                                                        ; Status ; Read at                  ;
++------------------------------------------------------------------------------------------------------+--------+--------------------------+
+; DE0_NANO_SOC_Default.SDC                                                                             ; OK     ; Thu Jul 02 05:21:09 2020 ;
+; d:/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_avalon_st_jtag_interface.sdc ; OK     ; Thu Jul 02 05:21:09 2020 ;
+; d:/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_reset_controller.sdc         ; OK     ; Thu Jul 02 05:21:09 2020 ;
++------------------------------------------------------------------------------------------------------+--------+--------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -125,8 +125,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; FPGA_CLK1_50                                                          ; Base      ; 20.000 ; 50.0 MHz   ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;                                                           ;                                                                          ; { FPGA_CLK1_50 }                                                          ;
 ; FPGA_CLK2_50                                                          ; Base      ; 20.000 ; 50.0 MHz   ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;                                                           ;                                                                          ; { FPGA_CLK2_50 }                                                          ;
 ; FPGA_CLK3_50                                                          ; Base      ; 20.000 ; 50.0 MHz   ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;                                                           ;                                                                          ; { FPGA_CLK3_50 }                                                          ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; Generated ; 16.485 ; 60.66 MHz  ; 0.000 ; 8.242  ; 50.00      ; 7         ; 1           ;       ;        ;           ;            ; false    ; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|vco0ph[0] ; { u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk } ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; Generated ; 2.355  ; 424.61 MHz ; 0.000 ; 1.177  ; 50.00      ; 128       ; 1087        ;       ;        ;           ;            ; false    ; FPGA_CLK1_50                                              ; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|refclkin                ; { u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] }             ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; Generated ; 8.396  ; 119.09 MHz ; 0.000 ; 4.198  ; 50.00      ; 4         ; 1           ;       ;        ;           ;            ; false    ; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|vco0ph[0] ; { u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk } ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; Generated ; 2.099  ; 476.37 MHz ; 0.000 ; 1.049  ; 50.00      ; 256       ; 2439        ;       ;        ;           ;            ; false    ; FPGA_CLK1_50                                              ; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|refclkin                ; { u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] }             ;
 +-----------------------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-----------------------------------------------------------+--------------------------------------------------------------------------+---------------------------------------------------------------------------+
 
 
@@ -136,8 +136,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Fmax       ; Restricted Fmax ; Clock Name                                                            ; Note ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
 ; 51.65 MHz  ; 51.65 MHz       ; altera_reserved_tck                                                   ;      ;
-; 66.46 MHz  ; 66.46 MHz       ; FPGA_CLK1_50                                                          ;      ;
-; 121.42 MHz ; 121.42 MHz      ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ;      ;
+; 68.64 MHz  ; 68.64 MHz       ; FPGA_CLK1_50                                                          ;      ;
+; 183.35 MHz ; 183.35 MHz      ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ;      ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -153,8 +153,8 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -4.272 ; -169.370      ;
-; FPGA_CLK1_50                                                          ; 4.954  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -3.552 ; -444.889      ;
+; FPGA_CLK1_50                                                          ; 5.431  ; 0.000         ;
 ; altera_reserved_tck                                                   ; 10.320 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
@@ -164,9 +164,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; FPGA_CLK1_50                                                          ; 0.301 ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.312 ; 0.000         ;
-; altera_reserved_tck                                                   ; 0.443 ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.238 ; 0.000         ;
+; FPGA_CLK1_50                                                          ; 0.314 ; 0.000         ;
+; altera_reserved_tck                                                   ; 0.440 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -175,8 +175,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; FPGA_CLK1_50        ; 15.886 ; 0.000         ;
-; altera_reserved_tck ; 36.251 ; 0.000         ;
+; FPGA_CLK1_50        ; 15.322 ; 0.000         ;
+; altera_reserved_tck ; 37.379 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -185,8 +185,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; FPGA_CLK1_50        ; 0.524 ; 0.000         ;
-; altera_reserved_tck ; 0.918 ; 0.000         ;
+; FPGA_CLK1_50        ; 0.570 ; 0.000         ;
+; altera_reserved_tck ; 0.821 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -195,10 +195,10 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.177  ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 7.525  ; 0.000         ;
-; FPGA_CLK1_50                                                          ; 8.899  ; 0.000         ;
-; altera_reserved_tck                                                   ; 18.836 ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.049  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 3.502  ; 0.000         ;
+; FPGA_CLK1_50                                                          ; 8.897  ; 0.000         ;
+; altera_reserved_tck                                                   ; 18.852 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -211,7 +211,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 24
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-Worst Case Available Settling Time: 18.603 ns
+Worst Case Available Settling Time: 17.937 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -226,8 +226,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; Fmax       ; Restricted Fmax ; Clock Name                                                            ; Note ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
 ; 52.41 MHz  ; 52.41 MHz       ; altera_reserved_tck                                                   ;      ;
-; 68.1 MHz   ; 68.1 MHz        ; FPGA_CLK1_50                                                          ;      ;
-; 121.77 MHz ; 121.77 MHz      ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ;      ;
+; 69.85 MHz  ; 69.85 MHz       ; FPGA_CLK1_50                                                          ;      ;
+; 182.25 MHz ; 182.25 MHz      ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ;      ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -237,8 +237,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -4.092 ; -162.451      ;
-; FPGA_CLK1_50                                                          ; 5.316  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -3.446 ; -436.788      ;
+; FPGA_CLK1_50                                                          ; 5.683  ; 0.000         ;
 ; altera_reserved_tck                                                   ; 10.460 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
@@ -248,9 +248,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; FPGA_CLK1_50                                                          ; 0.284 ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.296 ; 0.000         ;
-; altera_reserved_tck                                                   ; 0.456 ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.217 ; 0.000         ;
+; FPGA_CLK1_50                                                          ; 0.296 ; 0.000         ;
+; altera_reserved_tck                                                   ; 0.454 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -259,8 +259,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; FPGA_CLK1_50        ; 16.064 ; 0.000         ;
-; altera_reserved_tck ; 36.437 ; 0.000         ;
+; FPGA_CLK1_50        ; 15.505 ; 0.000         ;
+; altera_reserved_tck ; 37.491 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -269,8 +269,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; FPGA_CLK1_50        ; 0.461 ; 0.000         ;
-; altera_reserved_tck ; 0.855 ; 0.000         ;
+; FPGA_CLK1_50        ; 0.494 ; 0.000         ;
+; altera_reserved_tck ; 0.782 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -279,10 +279,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.177  ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 7.458  ; 0.000         ;
-; FPGA_CLK1_50                                                          ; 8.941  ; 0.000         ;
-; altera_reserved_tck                                                   ; 18.809 ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.049  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 3.424  ; 0.000         ;
+; FPGA_CLK1_50                                                          ; 8.948  ; 0.000         ;
+; altera_reserved_tck                                                   ; 18.855 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -295,7 +295,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 24
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-Worst Case Available Settling Time: 18.697 ns
+Worst Case Available Settling Time: 18.089 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -309,8 +309,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -3.469 ; -134.299      ;
-; FPGA_CLK1_50                                                          ; 9.999  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -3.311 ; -413.566      ;
+; FPGA_CLK1_50                                                          ; 10.315 ; 0.000         ;
 ; altera_reserved_tck                                                   ; 12.377 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
@@ -320,9 +320,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; FPGA_CLK1_50                                                          ; 0.169 ; 0.000         ;
-; altera_reserved_tck                                                   ; 0.171 ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.177 ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.146 ; 0.000         ;
+; altera_reserved_tck                                                   ; 0.170 ; 0.000         ;
+; FPGA_CLK1_50                                                          ; 0.173 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -331,8 +331,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; FPGA_CLK1_50        ; 17.208 ; 0.000         ;
-; altera_reserved_tck ; 37.464 ; 0.000         ;
+; FPGA_CLK1_50        ; 16.795 ; 0.000         ;
+; altera_reserved_tck ; 38.183 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -341,8 +341,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; FPGA_CLK1_50        ; 0.272 ; 0.000         ;
-; altera_reserved_tck ; 0.476 ; 0.000         ;
+; FPGA_CLK1_50        ; 0.312 ; 0.000         ;
+; altera_reserved_tck ; 0.401 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -351,10 +351,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.177  ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 7.788  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.049  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 3.751  ; 0.000         ;
 ; FPGA_CLK1_50                                                          ; 8.480  ; 0.000         ;
-; altera_reserved_tck                                                   ; 18.746 ; 0.000         ;
+; altera_reserved_tck                                                   ; 18.766 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -367,7 +367,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 24
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-Worst Case Available Settling Time: 19.125 ns
+Worst Case Available Settling Time: 18.568 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -381,8 +381,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -3.009 ; -116.616      ;
-; FPGA_CLK1_50                                                          ; 10.796 ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -3.072 ; -389.540      ;
+; FPGA_CLK1_50                                                          ; 11.094 ; 0.000         ;
 ; altera_reserved_tck                                                   ; 12.555 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
@@ -392,9 +392,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                                   ; 0.156 ; 0.000         ;
-; FPGA_CLK1_50                                                          ; 0.157 ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.164 ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 0.132 ; 0.000         ;
+; altera_reserved_tck                                                   ; 0.155 ; 0.000         ;
+; FPGA_CLK1_50                                                          ; 0.160 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -403,8 +403,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; FPGA_CLK1_50        ; 17.576 ; 0.000         ;
-; altera_reserved_tck ; 37.740 ; 0.000         ;
+; FPGA_CLK1_50        ; 17.174 ; 0.000         ;
+; altera_reserved_tck ; 38.353 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -413,8 +413,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; FPGA_CLK1_50        ; 0.216 ; 0.000         ;
-; altera_reserved_tck ; 0.419 ; 0.000         ;
+; FPGA_CLK1_50        ; 0.255 ; 0.000         ;
+; altera_reserved_tck ; 0.363 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -423,10 +423,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.177  ; 0.000         ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 7.780  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; 1.049  ; 0.000         ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 3.743  ; 0.000         ;
 ; FPGA_CLK1_50                                                          ; 8.435  ; 0.000         ;
-; altera_reserved_tck                                                   ; 18.730 ; 0.000         ;
+; altera_reserved_tck                                                   ; 18.752 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -439,7 +439,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 24
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-Worst Case Available Settling Time: 19.219 ns
+Worst Case Available Settling Time: 18.760 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -453,15 +453,15 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                                                  ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                       ; -4.272   ; 0.156 ; 15.886   ; 0.216   ; 1.177               ;
-;  FPGA_CLK1_50                                                          ; 4.954    ; 0.157 ; 15.886   ; 0.216   ; 8.435               ;
-;  altera_reserved_tck                                                   ; 10.320   ; 0.156 ; 36.251   ; 0.419   ; 18.730              ;
-;  u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -4.272   ; 0.164 ; N/A      ; N/A     ; 7.458               ;
-;  u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; N/A      ; N/A   ; N/A      ; N/A     ; 1.177               ;
-; Design-wide TNS                                                        ; -169.37  ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+; Worst-case Slack                                                       ; -3.552   ; 0.132 ; 15.322   ; 0.255   ; 1.049               ;
+;  FPGA_CLK1_50                                                          ; 5.431    ; 0.160 ; 15.322   ; 0.255   ; 8.435               ;
+;  altera_reserved_tck                                                   ; 10.320   ; 0.155 ; 37.379   ; 0.363   ; 18.752              ;
+;  u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -3.552   ; 0.132 ; N/A      ; N/A     ; 3.424               ;
+;  u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; N/A      ; N/A   ; N/A      ; N/A     ; 1.049               ;
+; Design-wide TNS                                                        ; -444.889 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  FPGA_CLK1_50                                                          ; 0.000    ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  altera_reserved_tck                                                   ; 0.000    ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -169.370 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; -444.889 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 ;  u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]             ; N/A      ; N/A   ; N/A      ; N/A     ; 0.000               ;
 +------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
 
@@ -640,10 +640,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; GPIO_1[25]          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; FPGA_CLK1_50        ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[0]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; KEY[1]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[3]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[2]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[1]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; KEY[1]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[0]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tms ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; altera_reserved_tck ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -1024,12 +1024,12 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------+----------+----------+----------+
 ; From Clock                                                            ; To Clock                                                              ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------+----------+----------+----------+
-; altera_reserved_tck                                                   ; altera_reserved_tck                                                   ; 6032       ; 50       ; 39       ; 0        ;
+; altera_reserved_tck                                                   ; altera_reserved_tck                                                   ; 6094       ; 51       ; 39       ; 0        ;
 ; FPGA_CLK1_50                                                          ; altera_reserved_tck                                                   ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck                                                   ; FPGA_CLK1_50                                                          ; false path ; 0        ; 0        ; 0        ;
-; FPGA_CLK1_50                                                          ; FPGA_CLK1_50                                                          ; 2284091    ; 0        ; 0        ; 0        ;
-; FPGA_CLK1_50                                                          ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 43         ; 0        ; 0        ; 0        ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 633        ; 0        ; 0        ; 0        ;
+; FPGA_CLK1_50                                                          ; FPGA_CLK1_50                                                          ; 2351590    ; 0        ; 0        ; 0        ;
+; FPGA_CLK1_50                                                          ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 140        ; 0        ; 0        ; 0        ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 1827       ; 0        ; 0        ; 0        ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1039,12 +1039,12 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------+----------+----------+----------+
 ; From Clock                                                            ; To Clock                                                              ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------+----------+----------+----------+
-; altera_reserved_tck                                                   ; altera_reserved_tck                                                   ; 6032       ; 50       ; 39       ; 0        ;
+; altera_reserved_tck                                                   ; altera_reserved_tck                                                   ; 6094       ; 51       ; 39       ; 0        ;
 ; FPGA_CLK1_50                                                          ; altera_reserved_tck                                                   ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck                                                   ; FPGA_CLK1_50                                                          ; false path ; 0        ; 0        ; 0        ;
-; FPGA_CLK1_50                                                          ; FPGA_CLK1_50                                                          ; 2284091    ; 0        ; 0        ; 0        ;
-; FPGA_CLK1_50                                                          ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 43         ; 0        ; 0        ; 0        ;
-; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 633        ; 0        ; 0        ; 0        ;
+; FPGA_CLK1_50                                                          ; FPGA_CLK1_50                                                          ; 2351590    ; 0        ; 0        ; 0        ;
+; FPGA_CLK1_50                                                          ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 140        ; 0        ; 0        ; 0        ;
+; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; 1827       ; 0        ; 0        ; 0        ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1054,10 +1054,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 70         ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 68         ; 0        ; 0        ; 0        ;
 ; FPGA_CLK1_50        ; altera_reserved_tck ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; FPGA_CLK1_50        ; false path ; 0        ; 0        ; 0        ;
-; FPGA_CLK1_50        ; FPGA_CLK1_50        ; 443        ; 0        ; 0        ; 0        ;
+; FPGA_CLK1_50        ; FPGA_CLK1_50        ; 677        ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1067,10 +1067,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 70         ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 68         ; 0        ; 0        ; 0        ;
 ; FPGA_CLK1_50        ; altera_reserved_tck ; false path ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; FPGA_CLK1_50        ; false path ; 0        ; 0        ; 0        ;
-; FPGA_CLK1_50        ; FPGA_CLK1_50        ; 443        ; 0        ; 0        ; 0        ;
+; FPGA_CLK1_50        ; FPGA_CLK1_50        ; 677        ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1095,7 +1095,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 6     ; 6    ;
-; Unconstrained Input Port Paths  ; 95    ; 95   ;
+; Unconstrained Input Port Paths  ; 234   ; 234  ;
 ; Unconstrained Output Ports      ; 25    ; 25   ;
 ; Unconstrained Output Port Paths ; 29    ; 29   ;
 +---------------------------------+-------+------+
@@ -1215,10 +1215,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jul 01 07:31:10 2020
+    Info: Processing started: Thu Jul 02 05:21:06 2020
 Info: Command: quartus_sta DE0_NANO_SOC_Default -c DE0_NANO_SOC_Default
 Info: qsta_default_script.tcl version: #3
-Warning (12473): User specified to use only one processors but 16 processors were detected which could be used to decrease run time.
+Warning (12473): User specified to use only one processors but 6 processors were detected which could be used to decrease run time.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332164): Evaluating HDL-embedded SDC commands
@@ -1231,11 +1231,11 @@ Info (332164): Evaluating HDL-embedded SDC commands
 Info (332104): Reading SDC File: 'DE0_NANO_SOC_Default.SDC'
 Warning (332043): Overwriting existing clock: altera_reserved_tck
 Info (332110): Deriving PLL clocks
-    Info (332110): create_generated_clock -source {u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|refclkin} -divide_by 128 -multiply_by 1087 -duty_cycle 50.00 -name {u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]} {u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]}
-    Info (332110): create_generated_clock -source {u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|vco0ph[0]} -divide_by 7 -duty_cycle 50.00 -name {u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk} {u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk}
+    Info (332110): create_generated_clock -source {u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|refclkin} -divide_by 256 -multiply_by 2439 -duty_cycle 50.00 -name {u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]} {u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]}
+    Info (332110): create_generated_clock -source {u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|vco0ph[0]} -divide_by 4 -duty_cycle 50.00 -name {u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk} {u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk}
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Info (332104): Reading SDC File: 'd:/shared_drive/quartus_workspaces/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_avalon_st_jtag_interface.sdc'
-Info (332104): Reading SDC File: 'd:/shared_drive/quartus_workspaces/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_reset_controller.sdc'
+Info (332104): Reading SDC File: 'd:/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_avalon_st_jtag_interface.sdc'
+Info (332104): Reading SDC File: 'd:/antenna_modulation_hdlv1_2020_quartus/db/ip/system/submodules/altera_reset_controller.sdc'
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|REFCLK_SELECT  from: clkin[0]  to: clkout
@@ -1245,35 +1245,35 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.272
+Info (332146): Worst-case setup slack is -3.552
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.272            -169.370 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     4.954               0.000 FPGA_CLK1_50 
+    Info (332119):    -3.552            -444.889 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     5.431               0.000 FPGA_CLK1_50 
     Info (332119):    10.320               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.301
+Info (332146): Worst-case hold slack is 0.238
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.301               0.000 FPGA_CLK1_50 
-    Info (332119):     0.312               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     0.443               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 15.886
+    Info (332119):     0.238               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     0.314               0.000 FPGA_CLK1_50 
+    Info (332119):     0.440               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 15.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.886               0.000 FPGA_CLK1_50 
-    Info (332119):    36.251               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.524
+    Info (332119):    15.322               0.000 FPGA_CLK1_50 
+    Info (332119):    37.379               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.570
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.524               0.000 FPGA_CLK1_50 
-    Info (332119):     0.918               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 1.177
+    Info (332119):     0.570               0.000 FPGA_CLK1_50 
+    Info (332119):     0.821               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 1.049
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.177               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
-    Info (332119):     7.525               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     8.899               0.000 FPGA_CLK1_50 
-    Info (332119):    18.836               0.000 altera_reserved_tck 
+    Info (332119):     1.049               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
+    Info (332119):     3.502               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     8.897               0.000 FPGA_CLK1_50 
+    Info (332119):    18.852               0.000 altera_reserved_tck 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1282,7 +1282,7 @@ Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 24
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-    Info (332114): Worst Case Available Settling Time: 18.603 ns
+    Info (332114): Worst Case Available Settling Time: 17.937 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -1298,35 +1298,35 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.092
+Info (332146): Worst-case setup slack is -3.446
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.092            -162.451 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     5.316               0.000 FPGA_CLK1_50 
+    Info (332119):    -3.446            -436.788 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     5.683               0.000 FPGA_CLK1_50 
     Info (332119):    10.460               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.284
+Info (332146): Worst-case hold slack is 0.217
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.284               0.000 FPGA_CLK1_50 
-    Info (332119):     0.296               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     0.456               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 16.064
+    Info (332119):     0.217               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     0.296               0.000 FPGA_CLK1_50 
+    Info (332119):     0.454               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 15.505
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    16.064               0.000 FPGA_CLK1_50 
-    Info (332119):    36.437               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.461
+    Info (332119):    15.505               0.000 FPGA_CLK1_50 
+    Info (332119):    37.491               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.494
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.461               0.000 FPGA_CLK1_50 
-    Info (332119):     0.855               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 1.177
+    Info (332119):     0.494               0.000 FPGA_CLK1_50 
+    Info (332119):     0.782               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 1.049
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.177               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
-    Info (332119):     7.458               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     8.941               0.000 FPGA_CLK1_50 
-    Info (332119):    18.809               0.000 altera_reserved_tck 
+    Info (332119):     1.049               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
+    Info (332119):     3.424               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     8.948               0.000 FPGA_CLK1_50 
+    Info (332119):    18.855               0.000 altera_reserved_tck 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1335,7 +1335,7 @@ Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 24
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-    Info (332114): Worst Case Available Settling Time: 18.697 ns
+    Info (332114): Worst Case Available Settling Time: 18.089 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -1351,35 +1351,35 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.469
+Info (332146): Worst-case setup slack is -3.311
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.469            -134.299 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     9.999               0.000 FPGA_CLK1_50 
+    Info (332119):    -3.311            -413.566 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):    10.315               0.000 FPGA_CLK1_50 
     Info (332119):    12.377               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.169
+Info (332146): Worst-case hold slack is 0.146
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.169               0.000 FPGA_CLK1_50 
-    Info (332119):     0.171               0.000 altera_reserved_tck 
-    Info (332119):     0.177               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-Info (332146): Worst-case recovery slack is 17.208
+    Info (332119):     0.146               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     0.170               0.000 altera_reserved_tck 
+    Info (332119):     0.173               0.000 FPGA_CLK1_50 
+Info (332146): Worst-case recovery slack is 16.795
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.208               0.000 FPGA_CLK1_50 
-    Info (332119):    37.464               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.272
+    Info (332119):    16.795               0.000 FPGA_CLK1_50 
+    Info (332119):    38.183               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.312
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.272               0.000 FPGA_CLK1_50 
-    Info (332119):     0.476               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 1.177
+    Info (332119):     0.312               0.000 FPGA_CLK1_50 
+    Info (332119):     0.401               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 1.049
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.177               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
-    Info (332119):     7.788               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     1.049               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
+    Info (332119):     3.751               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
     Info (332119):     8.480               0.000 FPGA_CLK1_50 
-    Info (332119):    18.746               0.000 altera_reserved_tck 
+    Info (332119):    18.766               0.000 altera_reserved_tck 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1388,7 +1388,7 @@ Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 24
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-    Info (332114): Worst Case Available Settling Time: 19.125 ns
+    Info (332114): Worst Case Available Settling Time: 18.568 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -1402,35 +1402,35 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.009
+Info (332146): Worst-case setup slack is -3.072
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.009            -116.616 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):    10.796               0.000 FPGA_CLK1_50 
+    Info (332119):    -3.072            -389.540 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):    11.094               0.000 FPGA_CLK1_50 
     Info (332119):    12.555               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.156
+Info (332146): Worst-case hold slack is 0.132
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.156               0.000 altera_reserved_tck 
-    Info (332119):     0.157               0.000 FPGA_CLK1_50 
-    Info (332119):     0.164               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-Info (332146): Worst-case recovery slack is 17.576
+    Info (332119):     0.132               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     0.155               0.000 altera_reserved_tck 
+    Info (332119):     0.160               0.000 FPGA_CLK1_50 
+Info (332146): Worst-case recovery slack is 17.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.576               0.000 FPGA_CLK1_50 
-    Info (332119):    37.740               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.216
+    Info (332119):    17.174               0.000 FPGA_CLK1_50 
+    Info (332119):    38.353               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.255
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.216               0.000 FPGA_CLK1_50 
-    Info (332119):     0.419               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 1.177
+    Info (332119):     0.255               0.000 FPGA_CLK1_50 
+    Info (332119):     0.363               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 1.049
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.177               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
-    Info (332119):     7.780               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     1.049               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
+    Info (332119):     3.743               0.000 u0|ant_clk|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
     Info (332119):     8.435               0.000 FPGA_CLK1_50 
-    Info (332119):    18.730               0.000 altera_reserved_tck 
+    Info (332119):    18.752               0.000 altera_reserved_tck 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1439,7 +1439,7 @@ Info (332114): Report Metastability: Found 24 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 24
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.625
-    Info (332114): Worst Case Available Settling Time: 19.219 ns
+    Info (332114): Worst Case Available Settling Time: 18.760 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -1448,9 +1448,9 @@ Info (332114): Report Metastability: Found 24 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 5136 megabytes
-    Info: Processing ended: Wed Jul 01 07:31:24 2020
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 5151 megabytes
+    Info: Processing ended: Thu Jul 02 05:21:23 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:17
 
 
